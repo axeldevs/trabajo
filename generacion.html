@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Generación de tareas para toma de lectura</title>
+</head>
+
+<body id="cuerpo">
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Facturación</a></li>
+                <li><a href="generacion.html">Generación</a></li>
+                <li><a href="releidas.html">Releidas</a></li>
+                <li><a href="claves.html">Claves</a></li>
+            </ul>
+        </nav>
+    </header>  
+    <main>
+        <h1>Generación de tareas para toma de lectura</h1>
+    <p>1. Tener las cifras control del ciclo a generar</p>
+    <h2>En nivel 1 (UNO)</h2>
+    <ol>
+        <li><b>Opción 03 - Cambios Directos ( E-19 )</b></li>
+        <li>Como parametro Ponemos el número de cuenta hasta la ruta y terminar con ceros <br>Ejemplo: <b>32DB10A013210000</b></li>
+        <li>Dar F1 para saber la CLAVE que pondremos para toma de lectura dependiendo el MES A FACTURAR</li>
+        <li>Al poner la clave correspondiente pedirá el AÑO A FACTURAR: <b>AAAA</b></li>
+        <li>Te preguntará si deseas calendario de fechas reales. Elegimos que no <b>(N)</b></li>
+        <li>Ponemos la fecha de toma de lectura: <b>AAAAMMDD</b></li>
+        <li>Pregunta si es correcta la modificación. Ponemos que si <b>(S)</b></li>
+        <li>Volvemos a poner el año a facturar: <b>AAAA</b></li>
+        <li>De nuevo preguntará si deseas calendario de fechas reales. Ahora elegimos que si <b>(S)</b></li>
+        <li>Volvemos a poner la fecha de toma de lectura: <b>AAAAMMDD</b></li>
+        <li>Pregunta si es correcta la modificación. Ponemos que Si <b>(S)</b></li>
+    </ol>
+    <h2>En nivel 0 (CERO)</h2>
+    <ol>
+        <li><b>Opcion 01 - Selección Rutas Toma de Lect.</b></li>
+        <li>Ponemos la fecha en que se tomará el ciclo a generar: <b>AAAAMMDD</b></li>
+        <li>Seleccionamos cada una de las rutas del ciclo a generar y damos ENTER</li>
+        <li>Al seleccionar todas las rutas presionamos F8. Preguntará si procede a la generación de archivos para lectura. Ponemos Si <b>(S)</b></li>
+        <li>Esperamos...</li>
+        <li>Pondrá la leyenda de proceso terminado correctamente. Damos ENTER</li>
+        <li>Regresamos a menu principal Nivel 0 (CERO)</li>
+        <li><b>Opcion 02 - Explotación Tareas LIRE</b></li>
+        <li><b>Opcion 01 - Generación Tareas/Reporte de cortes/Lecturas/Ciclo limpio</b></li>
+        <li>Esperamos...</li>
+        <li>Si sale la leyenda de Archivo de lecturas sin movimientos damos ENTER y seguimos esperando.</li>
+        <li>Seleccionamos las rutas para toma de lectura una por una. <i>Las rutas para <b>Lecturas(Tienen CVE L).</b> Las rutas para <b>Releidas(Tienen CVE R)</b></i></li>
+        <li>Damos ENTER hasta tarea y escribimos la <b>tarea</b> en la que se leerá cada ruta. En sello y F-PROP damos ENTER</li>
+        <li>Bajamos con la flecha (↓) y repetimos el proceso hasta hacerlo con todas las rutas</li>
+        <li>Al tenerminar presionar <b>F8</b></li>
+        <li>Luego <b>F1</b> para seleccionar enviar a <b>KAVI</b></li>
+        <li>Escribimos el <b>RPE</b> del <b>Auxiliar</b> que tomará cada ruta. Sacar CAPTURA DE PANTALLA y esperamos...</li>
+        <li>Una vez que termine de procesar el sistema presionamos ENTER y podremos cargar las tareas en las TPs</li>
+    </ol>
+    <p><a href="releidas.html">Para <b>generar releidas</b> hay que depurar. Procedimiento aqui</a></p>
+    </main>
+    <script src="app.js"></script>
+</body>
+
+</html>

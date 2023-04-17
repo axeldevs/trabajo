@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Procedimientos Facturación</title>
+    
+</head>
+
+<body id="cuerpo">
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Facturación</a></li>
+                <li><a href="generacion.html">Generación</a></li>
+                <li><a href="releidas.html">Releidas</a></li>
+                <li><a href="claves.html">Claves</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h1>Procedimientos Facturación</h1>
+
+        <h2>REVISION EN KAVI</h2>
+        <ol>
+            <li>Tener <b>Cifras Control</b> del ciclo a facturar</li>
+            <li>Filtrar en KAVI servicios con:
+                <ul>
+                    <li>Observaciones</li>
+                    <li>Lecturas negativas</li>
+                    <li>Altas de medidores</li>
+                    <li>Números de medidor desiguales</li>
+                </ul>
+            </li>
+            <li><b>Importante verificar que NO HAYA ALTAS O CAMBIOS DE MEDIDOR pendientes antes de unir tarea</b></li>
+        </ol>
+        <div class="white"><h2 id="union">Union de tareas</h2>
+        <h3>NIVEL 0 (Cero)</h3>
+        <ol>
+            <li><b>02 - Explotacion Tareas LIRE</b></li>
+            <li><b>4 - Procesos</b></li>
+            <li><b>01) - Unión de Tareas</b></li>
+            <li>Procedemos a llenar los datos que se piden, esto se hace tarea por tarea a unir. Ejemplo:
+                <table border="1">
+                    <tr>
+                        <th>Ciclo a unir</th>
+                        <td>[20]</td>
+                    </tr>
+                    <tr>
+                        <th>Tarea</th>
+                        <td>[9020]</td>
+                    </tr>
+                </table>
+            </li>
+            <li>Confirmar que se hayan unido todos los servicios.</li>
+            <li>Preguntara si queremos imprimir reportes, ponemos la primera vez que si y la segunda vez que no</li>
+            <li>Despues de unir cada tarea procedemos a <b>2) Act. Archivos de Productividad</b> escribiendo cada tarea
+                unida y guardamos <b>captura</b> para los reportes a imprimir</li>
+            <li><b>Volvemos al menú del nivel 0 (CERO)</b></li>
+            <li><b>03 - Submenú int. de consumos</b></li>
+            <li><b>01 - Actualizacion de fechas de ruta</b></li>
+            <li>Preguntará si deseamos crear Respaldo. Elegimos No.</li>
+            <li>Ingresamos No. de Cuenta sin el folio, Año/Mes de facturacón y fecha hasta. Ejemplo:
+                <table border="1">
+                    <tr>
+                        <th>Número de Ruta<br>(CcDdZzAPpRrr)</th>
+                        <th>Año/Mes De Facturación<br>(AaAaMm)</th>
+                        <th>Fecha Hasta Del Periodo<br>(AaAaMmDd)</th>
+                    </tr>
+                    <tr>
+                        <td>20 DB 10 J B1 150</td>
+                        <td>2023 04</td>
+                        <td>2023 04 16</td>
+                    </tr>
+                </table>
+            </li>
+            <li>Repetir este paso por cada ruta</li>
+            <li>Volver a <b>03 - Submenú int. de consumos</b></li>
+            <li>Ingresar a <b>02 - Carga de lecturas del dia</b> e ingresar el Ciclo a facturar</li>
+            <li>Revisar en SCRICFE que se hayan generado todos los reportes</li>
+            <li>Revisar en el <b>estado de la ruta</b> debe decir <b>"Lecturas Capturadas"</b></li>
+            <li>Revisar las anomalías previamente filtradas en KAVI que tengan solicitud para atención, de lo contrario
+                crearlas en SICOSS. Los cambios de tarifa se anexan al Excel de OneDrive</li>
+
+        </ol></div>
+        <h2>Valorización</h2>
+        <ol>
+            <li>Volver al menú del nivel 0 (CERO)</li>
+            <li><b>03 - Submenú int. de consumos</b></li>
+            <li><b>03 - Facturación de rutas y ciclos</b></li>
+            <li>Se escribe el ciclo a valorizar en el parametro ( CcDdZzA000000000) o si es solo una ruta (
+                CcDdZzAPpRrr0000). Todos los demas recuadros se llenan solos Ej:
+                <table border="1">
+                    <tr>
+                        <th>*-- Parámetro --*</th>
+                        <th>Ruta en proceso:</th>
+                        <th>Fecha Desde</th>
+                        <th>Fecha Hasta</th>
+                    </tr>
+                    <tr>
+                        <td><input type="text" name="ciclo" value="20 DB 10 J 00 000 0000" disabled></td>
+                        <td><input type="text" name="ciclo" value="20 DB 10 J B1 150" disabled></td>
+                        <td><input type="text" class="empty" name="ciclo" disabled></td>
+                        <td><input type="text" class="empty" name="ciclo" disabled></td>
+                    </tr>
+                </table>
+            </li>
+
+            <li><b>Nota *</b> Para integrar las releidas primero hay que cambiar el estado de las rutas con la <a
+                    href="claves.html">CVE 150</a> a 00 y repetir el proceso de <a href="index.html#union">union de
+                    tareas</a></li>
+        </ol>
+    </main>
+    <script src="app.js"></script>
+</body>
+
+</html>

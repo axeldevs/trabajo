@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Generación de rutas para Releidas</title>
+</head>
+
+<body id="cuerpo">
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Facturación</a></li>
+                <li><a href="generacion.html">Generación</a></li>
+                <li><a href="releidas.html">Releidas</a></li>
+                <li><a href="claves.html">Claves</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h1>Generación de rutas para Releidas</h1>
+
+        <h2>SICOM NUEVO</h2>
+        <ol>
+            <li>Ingresamos con claves de acceso RELEI:
+                <ul>
+                    <li>LOGIN: RELEI</li>
+                    <li>YES</li>
+                    <li>PASS: CFEDIS-Db000 | Db000-CFEDIS</li>
+                </ul>
+            </li>
+            <li>Ingresamos los datos de cada ruta. Ejemplo:
+                <ul>
+                    <li>agencia: [DB10J] (ddzza)</li>
+                    <li>Ciclo: [26]</li>
+                    <li>Pob: [B3]</li>
+                    <li>Ruta: [261]</li>
+                </ul>
+            </li>
+        </ol>
+        <h2>NIVEL 0 (CERO)</h2>
+        <ol>
+            <li>opción <b>5) Reportes</b></li>
+            <li>Opcion <b>2) Usuarios sin toma de lecturas por Tarea</b></li>
+            <li>Se escribe cada tarea, esto se manda a SCRICFE. Se junta toda la informacion en un WORD y se imprime
+            </li>
+            <li>Se procede a <a href="generacion.html">generar</a> la tarea de releidas como una generacion cualquiera,
+                solo que se esta vez se seleccionan la <b>CVE R</b> (releidas)</li>
+            <li><b>Nota *</b> Para integrar las releidas primero hay que cambiar el estado de las rutas con la <a
+                    href="claves.html">CVE 150</a> a 00 y repetir el proceso de <a href="index.html#union">union de
+                    tareas</a></li>
+        </ol>
+    </main>
+    <script src="app.js"></script>
+</body>
+
+</html>
